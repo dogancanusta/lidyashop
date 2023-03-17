@@ -24,7 +24,7 @@ input[type=email]{
     justify-content: space-between;
     align-items: center;
     /* background-color: rgb(204, 204, 204, 1); */
-    background-color: red;
+    background-color: rgb(218, 215, 205, 0.3);
     height: 70px;
 }
 .sidebar-menu{
@@ -37,22 +37,16 @@ input[type=email]{
     transform: translateX(-400px);
     transition: all .3s;
     /* background-color: rgb(204, 204, 204, 1); */
-    background-color: red;
+    background-color: rgb(218, 215, 205, 0.3);
     padding-top: 5px;
-}
-.sidebar-menulist{
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
 .sidebar-menulist li{
     list-style: none;
     color: #000;
     text-transform: uppercase;
-    font-weight: bold;
     padding: 20px;
     cursor: pointer;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    border-bottom: 1px solid rgb(218, 215, 205);
 }
 .sidebar-menulist li a{
     color: #000;
@@ -83,7 +77,7 @@ input[type=email]{
     position: absolute;
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    background-color: #000;
 }
 .horizontal{
     transition: all 0.3s;
@@ -122,10 +116,10 @@ input[type=email]{
 }
 .tab{
     cursor: pointer;
-    padding-left: 20px;
+    padding: 0px 0px 20px 20px;
     /* background: #32557f; */
     display: inline-block;
-    color: #fff;
+    color: #000;
 }
 .panels{
     /* background: #fff; */
@@ -174,9 +168,10 @@ input[type=email]{
 }
 [data-toggle="modal"]{
     display: inline-block;
-    padding: 8px 20px;
-    background: #06c;
-    color: #fff;
+    padding: 10px 20px;
+    border: solid 2px #ab9b96;
+    border-radius: 5px;
+    color: #000;
     border-radius: 2px;
     text-decoration: none;
     cursor: pointer;
@@ -184,20 +179,15 @@ input[type=email]{
 }
 [data-toggle="modal"]:hover,
 [data-toggle="modal"]:focus{
-    background: #036;
+    background: rgb(171, 155, 150, 0.5);
 }
 .modal-close{
     position: absolute;
-    right: 0;
-    top: .65em;
+    right: 20px;
+    top: .50em;
     background: none;
     color: #333;
     transition: all .3s;
-}
-.modal-close:hover,
-.modal-close:focus{
-    color: #036;
-    background: none;
 }
 .modal-checkbox{
     display: none;
@@ -212,7 +202,6 @@ input[type=email]{
     height: calc(100vh - 70px);
     transition: all .3s;
     overflow: auto;
-    border: solid 2px red;
 }
 .modal:before{
     position: fixed;
@@ -243,20 +232,18 @@ input[type=email]{
 .modal-header{
     padding: 15px 30px;
     border-bottom: 1px solid #ccc;
-    background: #f2f2f2;
-}
-.modal-header h2{
-    margin: 0;
+    background: linear-gradient(90deg, #a1674a, #a63a50);
 }
 .modal-content {
-    padding: 15px 30px;
+    padding: 15px 20px;
 }
 .modal-footer{
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px;
+    align-items: center;
+    padding: 10px 20px;
     border-top: 1px solid #ccc;
-    background: #f2f2f2;
+    background: linear-gradient(90deg, #a63a50, #a1674a);
 }
 @media (max-width: 768px){
     .sidebar-menu {
