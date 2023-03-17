@@ -185,8 +185,6 @@ input[type=email]{
     position: absolute;
     right: 20px;
     top: .50em;
-    background: none;
-    color: #333;
     transition: all .3s;
 }
 .modal-checkbox{
@@ -202,6 +200,7 @@ input[type=email]{
     height: calc(100vh - 70px);
     transition: all .3s;
     overflow: auto;
+    color: #fff;
 }
 .modal:before{
     position: fixed;
@@ -223,8 +222,12 @@ input[type=email]{
 .modal-body{
     position: relative;
     z-index: 999;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     width: 400px;
+    max-width: 100%;
     margin: 0 auto;
     box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
     animation: fadein .5s;
@@ -243,7 +246,7 @@ input[type=email]{
     align-items: center;
     padding: 10px 20px;
     border-top: 1px solid #ccc;
-    background: linear-gradient(90deg, #a63a50, #a1674a);
+    background: linear-gradient(90deg, #a1674a, #a63a50);
 }
 @media (max-width: 768px){
     .sidebar-menu {
