@@ -6,11 +6,10 @@
     box-sizing: border-box;
     transition: all .3s;
 }
-.logo img {
+/* .logo img {
     width: 70px;
     height: 100%;
-    object-fit: none;
-  }
+  } */
 input[type=text],
 input[type=password],
 input[type=email]{
