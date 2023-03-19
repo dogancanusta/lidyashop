@@ -289,26 +289,38 @@ input[type=email]{
     object-fit: cover;
 }
 .main{
-    width: 100%;
+    max-width: 1280px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
     gap: 50px;
 }
-.card-container,
-.information-container{
+.asd{
+    width: 100%;
+    overflow: hidden;
+  }
+  .main-card{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+
+
+  #ones:checked ~ .main-card .cards:nth-child(1),
+  #twos:checked ~ .main-card .cards:nth-child(2),
+  #threes:checked ~ .main-card .cards:nth-child(3),
+  .information-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
-    max-width: 1280px;
-    padding: 5px;
-}
-.card{
-    flex: 1 1 300px;
-    border: solid 1px red;
-    position: relative;
+    animation: fadein 0.7s;
+  }
+  .card{
+    flex: 1 1 250px;
 }
 .card-header{
     position: absolute;
@@ -338,6 +350,43 @@ input[type=email]{
     border-top: solid 1px;
     padding: 15px 10px;
 }
+  .cards{
+    display: none;
+  }
+
+  .card{
+    width: 100%;
+    background: #fff;
+    border: solid 4px;
+  }
+  .slider-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding: 20px 5px;
+  }
+  .slider-dots{
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    display: flex;
+  }
+  .slider-dots label{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    text-align: center;
+    background: #ccc;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  input[type="radio"]{
+    display: none;
+  }
+
 .information-container h3{
     display: flex;
     justify-content: center;
