@@ -317,10 +317,11 @@ input[type=email]{
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
-    animation: fadein 0.7s;
+    animation: fadein 0.5s;
   }
   .card{
     flex: 1 1 250px;
+    position: relative;
 }
 .card-header{
     position: absolute;
@@ -360,29 +361,51 @@ input[type=email]{
     border: solid 4px;
   }
   .slider-header{
-    display: flex;
-    justify-content: space-between;
     width: 100%;
     position: relative;
-    padding: 20px 5px;
+    padding: 30px;
+  }
+  .slider-title{
+    background-color: #fff;
+    width: 100px;
+    position: absolute;
+    top: calc(21px - 5px);
+    left: 0;
+    padding: 5px 0px;
   }
   .slider-dots{
+    background-color: #fff;
+    width: 100px;
     position: absolute;
-    top: 20px;
-    right: 5px;
+    top: calc(20px - 5px);
+    right: 0px;
     display: flex;
+    padding: 5px 0px;
   }
   .slider-dots label{
-    height: 18px;
-    width: 18px;
+    height: 19px;
+    width: 19px;
     border-radius: 50%;
     text-align: center;
     background: #ccc;
     margin: 0 4px;
     cursor: pointer;
-    transition: all 0.5s ease;
   }
-  
+  .slider-headerline{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 21px;
+    left: 0;
+  }
+  .slider-headerline span{
+    display: block;
+    padding: 2px;
+    border: solid 1px;
+    border-style: dashed;
+    height: 1px;
+    width: 100%;
+  }
   input[type="radio"]{
     display: none;
   }
