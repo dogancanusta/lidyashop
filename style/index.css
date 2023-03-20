@@ -48,6 +48,7 @@ input[type=email]{
     /* background-color: rgb(204, 204, 204, 1); */
     background-color: rgb(218, 215, 205, 0.3);
     height: 70px;
+    z-index: 999999;
 }
 .sidebar-menu{
     height: 100%;
