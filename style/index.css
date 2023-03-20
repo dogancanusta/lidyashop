@@ -1,6 +1,6 @@
 *,
 *::after,
-*::before {
+*::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,6 +37,7 @@ input[type=email]{
     width: 32%;
     text-align: center;
 }
+
 .header{
     position: fixed;
     width: 100%;
@@ -75,13 +76,13 @@ input[type=email]{
     cursor: pointer;
     text-decoration: none;
 }
-.header-left input[type="checkbox"]:checked~.sidebar-menu{
+.header-left input[type="checkbox"]:checked~.sidebar-menu {
     transform: translateX(0);
 }
 .header-left input[type=checkbox]{
     display: none;
 }
-.toggle{
+.toggle {
     transition: all 0.3s;
     cursor: pointer;
     position: absolute;
@@ -93,7 +94,7 @@ input[type=email]{
     height: 25px;
     width: 25px;
 }
-.spinner{
+.spinner {
     transition: all 0.3s;
     position: absolute;
     height: 3px;
@@ -121,12 +122,12 @@ input[type=email]{
     transition: all 0.3s;
     opacity: 0;
 }
-.header-left input[type=checkbox]:checked~.toggle>.diagonal.part-1{
+.header-left input[type=checkbox]:checked~.toggle>.diagonal.part-1 {
     transition: all 0.3s;
     transform: rotate(135deg);
     margin-top: 8px;
 }
-.header-left input[type=checkbox]:checked~.toggle>.diagonal.part-2{
+.header-left input[type=checkbox]:checked~.toggle>.diagonal.part-2 {
     transition: all 0.3s;
     transform: rotate(-135deg);
     margin-top: -9px;
@@ -142,7 +143,7 @@ input[type=email]{
     display: inline-block;
     color: #000;
 }
-.panels{
+.panels {
     /* background: #fff; */
     max-width: 100%;
     width: 400px;
@@ -258,7 +259,7 @@ input[type=email]{
     border-bottom: 1px solid #ccc;
     background: linear-gradient(90deg, #a1674a, #a63a50);
 }
-.modal-content {
+.modal-content{
     padding: 15px 20px;
 }
 .modal-footer{
@@ -272,7 +273,6 @@ input[type=email]{
 .swiper{
     width: 100%;
     height: 500px;
-    z-index: -1;
 }
 .swiper-slide{
     text-align: center;
@@ -296,31 +296,20 @@ input[type=email]{
     padding: 5px;
     gap: 50px;
 }
-.card-container{
-    width: 100%;
-    overflow: hidden;
-  }
-  .main-card{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-
-
-  #ones:checked ~ .main-card .cards:nth-child(1),
-  #twos:checked ~ .main-card .cards:nth-child(2),
-  #threes:checked ~ .main-card .cards:nth-child(3),
-  .information-container{
+#ones:checked~.main-card .cards:nth-child(1),
+#twos:checked~.main-card .cards:nth-child(2),
+#threes:checked~.main-card .cards:nth-child(3),
+.information-container{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
     animation: fadein 0.5s;
-  }
-  .card{
-    flex: 1 1 250px;
+}
+.card{
+    flex: 1 1 300px;
     position: relative;
 }
 .card-header{
@@ -334,7 +323,7 @@ input[type=email]{
     object-fit: cover;
 }
 .card-img img:hover,
-.card-img img:focus{
+.card-img img:focus {
     transform: scale(1.03);
     z-index: -1;
 }
@@ -351,21 +340,20 @@ input[type=email]{
     border-top: solid 1px;
     padding: 15px 10px;
 }
-  .cards{
+.cards {
     display: none;
-  }
-
-  .card{
+}
+.card{
     width: 100%;
     background: #fff;
     border: solid 4px;
-  }
-  .slider-header{
+}
+.slider-header {
     width: 100%;
     position: relative;
     padding: 30px;
-  }
-  .slider-title{
+}
+.slider-title{
     background-color: #fff;
     width: 300px;
     position: absolute;
@@ -373,8 +361,8 @@ input[type=email]{
     left: 0;
     padding: 5px 0px;
     border-radius: 0px 50px 50px 0px;
-  }
-  .slider-dots{
+}
+.slider-dots{
     background-color: #fff;
     width: 100px;
     position: absolute;
@@ -384,8 +372,8 @@ input[type=email]{
     justify-content: center;
     padding: 5px 0px;
     border-radius: 50px 0px 0px 50px;
-  }
-  .slider-dots label{
+}
+.slider-dots label{
     height: 19px;
     width: 19px;
     border-radius: 50%;
@@ -393,26 +381,25 @@ input[type=email]{
     background: #ccc;
     cursor: pointer;
     margin-left: 15px;
-  }
-  .slider-headerline{
+}
+.slider-headerline{
     width: 100%;
     position: absolute;
     text-align: center;
     top: 21px;
     left: 0;
-  }
-  .slider-headerline span{
+}
+.slider-headerline span{
     display: block;
     padding: 2px;
     border: solid 1px;
     border-style: dashed;
     height: 1px;
     width: 100%;
-  }
-  input[type="radio"]{
+}
+input[type="radio"]{
     display: none;
-  }
-
+}
 .information-container h3{
     display: flex;
     justify-content: center;
@@ -459,7 +446,6 @@ input[type=email]{
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
-
     transition: all .3s;
 }
 .social ul li:hover{
@@ -498,10 +484,11 @@ input[type=email]{
     }
 }
 @keyframes fadein{
-    0% {
+    0%{
         transform: scale(0.95);
-      }
-      100% {
+    }
+
+    100%{
         transform: scale(1);
-      }
+    }
 }
