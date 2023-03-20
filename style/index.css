@@ -26,6 +26,7 @@ input[type=email]{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 50px;
 }
 .header-left,
 .header-right{
@@ -300,7 +301,8 @@ input[type=email]{
 #ones:checked~.main-card .cards:nth-child(1),
 #twos:checked~.main-card .cards:nth-child(2),
 #threes:checked~.main-card .cards:nth-child(3),
-.information-container{
+.information-container,
+.product-categories{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -308,6 +310,18 @@ input[type=email]{
     gap: 20px;
     width: 100%;
     animation: fadein 0.5s;
+}
+.product-categories .card{
+    flex: 1 1 400px;
+}
+.product-categories .card-body{
+    text-align: start;
+    padding-left: 20px;
+}
+.product-categories .card-header{
+    background-color: red;
+    text-align: end;
+    padding: 20px;
 }
 .card{
     flex: 1 1 300px;
@@ -393,7 +407,7 @@ input[type=email]{
 .slider-headerline span{
     display: block;
     padding: 2px;
-    border: solid 1px;
+    border: solid 1px rgb(0, 0, 0, 0.5);
     border-style: dashed;
     height: 1px;
     width: 100%;
