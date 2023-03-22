@@ -1,22 +1,21 @@
 *,
 *::after,
-*::before {
+*::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 /* body{
     background-color: #f1dae0;
 } */
-a {
+a{
     text-decoration: none;
     color: #000;
     cursor: pointer;
 }
 input[type=text],
 input[type=password],
-input[type=email] {
+input[type=email]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -24,9 +23,8 @@ input[type=email] {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-
 input[type=submit],
-input[type=button] {
+input[type=button]{
     appearance: button;
     background-color: #1652F0;
     border: 1px solid #1652F0;
@@ -48,30 +46,25 @@ input[type=button] {
     touch-action: manipulation;
     width: fit-content;
 }
-
 input[type=submit]:disabled,
-input[type=button]:disabled {
+input[type=button]:disabled{
     opacity: .5;
 }
-
-.button-26:focus {
+.button-26:focus{
     outline: 0;
 }
-
 input[type=submit]:hover,
-input[type=button]:hover {
+input[type=button]:hover{
     background-color: #0A46E4;
     border-color: #0A46E4;
 }
-
 input[type=submit]:active,
-input[type=button]:active {
+input[type=button]:active{
     background-color: #0039D7;
     border-color: #0039D7;
 }
-
-.header {
-    background-color: #a63a50;
+.header{
+    background-color: red;
     width: 100%;
     height: 70px;
     display: flex;
@@ -82,19 +75,16 @@ input[type=button]:active {
     align-items: center;
     z-index: 999999;
 }
-
 .header-left,
-.header-right {
+.header-right{
     width: 34%;
 }
-
-.logo {
+.logo{
     width: 32%;
     text-align: center;
 }
-
-.sidebar-menu {
-    background-color: #a63a50;
+.sidebar-menu{
+    background-color: red;
     width: 400px;
     max-width: 100%;
     height: 100%;
@@ -119,13 +109,13 @@ input[type=button]:active {
     cursor: pointer;
     text-decoration: none;
 }
-.header-left input[type="checkbox"]:checked~.sidebar-menu {
+.header-left input[type="checkbox"]:checked~.sidebar-menu{
     transform: translateX(0);
 }
-.header-left input[type=checkbox]{
+.header-left input[type=checkbox] {
     display: none;
 }
-.toggle {
+.toggle{
     cursor: pointer;
     position: absolute;
     z-index: 99;
@@ -136,100 +126,72 @@ input[type=button]:active {
     height: 25px;
     width: 25px;
 }
-.hamburger {
+.hamburger{
     transition: all 0.3s;
     position: absolute;
-    height: 3px;
     width: 100%;
+    border: solid 1px;
     background-color: #000;
 }
 .horizontal{
-    position: relative;
-    float: left;
-    margin-top: 3px;
+    margin: 5px 0px;
 }
-.diagonal.part-1{
-    position: relative;
-    float: left;
-}
+.diagonal.part-1,
+.horizontal,
 .diagonal.part-2{
     position: relative;
     float: left;
 }
+.header-left input[type=checkbox]:checked~.toggle>.diagonal.part-1{
+    transform: rotate(135deg);
+    margin-top: 9px;
+}
 .header-left input[type=checkbox]:checked~.toggle>.horizontal{
     opacity: 0;
 }
-.header-left input[type=checkbox]:checked~.toggle>.diagonal.part-1 {
-    transform: rotate(135deg);
-    margin-top: 8px;
-}
-.header-left input[type=checkbox]:checked~.toggle>.diagonal.part-2 {
+.header-left input[type=checkbox]:checked~.toggle>.diagonal.part-2{
     transform: rotate(-135deg);
-    margin-top: -9px;
-}
-.sidebar-tab{
-    display: flex;
-    flex-direction: column;
+    margin-top: -13px;
 }
 .tab{
-    cursor: pointer;
-    padding: 0px 0px 20px 20px;
     display: inline-block;
+    padding: 0px 0px 20px 20px;
+    cursor: pointer;
     color: #000;
 }
-.panels {
-    max-width: 100%;
-    width: 400px;
-    overflow: hidden;
-    transition: all 0.3s;
+.radio {
+    display: none;
+}
+#tab-one:checked~.panels #one-panel,
+#tab-two:checked~.panels #two-panel,
+#tab-three:checked~.panels #three-panel {
+    display: block;
 }
 .panel{
     display: none;
     animation: scale 0.5s;
 }
-.panel-title{
-    font-size: 1.5em;
-    font-weight: bold;
-}
-.radio{
-    display: none;
-}
-#one:checked~.panels #one-panel,
-#two:checked~.panels #two-panel,
-#three:checked~.panels #three-panel{
-    display: block;
-}
-#one:checked~.tabs #one-tab,
-#two:checked~.tabs #two-tab,
-#three:checked~.tabs #three-tab{
-    color: #000;
-}
-
-@media (max-width: 768px) {
-    .sidebar-menu {
+@media (max-width: 768px){
+    .sidebar-menu{
         width: 100%;
         transform: translateX(-100%);
     }
-
-    .panels {
+    .panels{
         width: 100%;
     }
-
-    .footer-bottom {
+    .footer-bottom{
         justify-content: center;
     }
-
-    .footer-description {
+    .footer-description{
         width: 100%;
     }
 }
 
-@keyframes scale {
-    0% {
-        transform: scale(1);
+@keyframes scale{
+    0%{
+        transform: scale(0.9);
     }
-
-    100% {
-        transform: scale(1.1);
+    100%{
+        transform: scale(1);
     }
 }
