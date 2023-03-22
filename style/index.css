@@ -9,6 +9,11 @@
 /* body{
     background-color: #f1dae0;
 } */
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
 input[type=text],
 input[type=password],
 input[type=email] {
@@ -18,12 +23,6 @@ input[type=email] {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 3px;
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-    cursor: pointer;
 }
 
 input[type=submit],
@@ -50,7 +49,8 @@ input[type=button] {
     width: fit-content;
 }
 
-.button-26:disabled {
+input[type=submit]:disabled,
+input[type=button]:disabled {
     opacity: .5;
 }
 
@@ -58,12 +58,14 @@ input[type=button] {
     outline: 0;
 }
 
-.button-26:hover {
+input[type=submit]:hover,
+input[type=button]:hover {
     background-color: #0A46E4;
     border-color: #0A46E4;
 }
 
-.button-26:active {
+input[type=submit]:active,
+input[type=button]:active {
     background-color: #0039D7;
     border-color: #0039D7;
 }
