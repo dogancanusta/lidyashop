@@ -340,12 +340,16 @@ backdrop-filter: blur(5px);
     right: 0;
     z-index: 1;
 }
+.card-img{
+    overflow: hidden;
+}
 .card-img img{
+    transform: scale(1);
     object-fit: cover;
 }
 .card-img img:hover,
 .card-img img:focus {
-    transform: scale(1.03);
+    transform: scale(1.1);
     z-index: -1;
 }
 .card-body{
@@ -427,7 +431,8 @@ input[type="radio"]{
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: solid 1px;
+    background-color: rgb(130, 192, 204, 0.3);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -438,6 +443,9 @@ input[type="radio"]{
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    background: #f1dae0;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(241,218,224,1) 70%);
+    
 }
 .footer{
     background-color: #a63a50;
