@@ -270,8 +270,7 @@ input[type=button]:active{
     object-fit: cover;
 }
 .main{
-    width: 1280px;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -291,27 +290,22 @@ input[type=button]:active{
     position: relative;
     border: solid 1px red;
 }
-
-.asd{
+.category {
     flex: 1 1 350px;
 }
-
-  
-  .asd .asd-title{
+.category .category-title{
     color: #1a1a1a;
     text-align: center;
     margin-bottom: 10px;
-  }
-  
-  .asd-content {
+}
+.category-content{
     position: relative;
     width: 100%;
     margin: auto;
     overflow: hidden;
-  }
-  
-  .asd-content .content-overlay {
-    background: rgba(0,0,0,0.7);
+}
+.category-content .category-overlay{
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
     height: 99%;
     width: 100%;
@@ -323,17 +317,14 @@ input[type=button]:active{
     -webkit-transition: all 0.4s ease-in-out 0s;
     -moz-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
-  }
-  
-  .asd-content:hover .content-overlay{
+}
+.category-content:hover .category-overlay{
     opacity: 1;
-  }
-  
-  .content-image{
+}
+.category-image{
     width: 100%;
-  }
-  
-  .content-details {
+}
+.category-details{
     position: absolute;
     text-align: center;
     padding-left: 1em;
@@ -348,50 +339,48 @@ input[type=button]:active{
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
-  }
-  
-  .asd-content:hover .content-details{
+}
+.category-content:hover .category-details{
     top: 50%;
     left: 50%;
     opacity: 1;
-  }
-  
-  .content-details h3{
+}
+.category-details h3{
     color: #fff;
     font-weight: 500;
     letter-spacing: 0.15em;
     margin-bottom: 0.5em;
     text-transform: uppercase;
-  }
-  
-  .content-details p{
+}
+.category-details p{
     color: #fff;
     font-size: 0.8em;
-  }
-  
-  .fadeIn-bottom{
+}
+.fadeIn-bottom{
     top: 80%;
-  }
-  
-  .fadeIn-top{
+}
+.fadeIn-top{
     top: 20%;
-  }
-  .fadeIn-left{
+}
+.fadeIn-left{
     left: 20%;
-  }
-  
-  .fadeIn-right{
+}
+.fadeIn-right{
     left: 80%;
-  }
-
-
-
-
-
-
-
+}
+.bestsellertrending-container,
+.bestseller,
+.trending{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
 .product-container,
 .category-container{
+    width: 1280px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
