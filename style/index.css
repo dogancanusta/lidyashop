@@ -5,9 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* body{
-    background-color: #f1dae0;
-} */
+body{
+    background-color: #f4f4f1;
+}
 a{
     text-decoration: none;
     color: #000;
@@ -71,7 +71,8 @@ input[type=button]:active{
     align-items: center;
 }
 .header{
-    background-color: red;
+    background-color: #f4f4f1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 100%;
     height: 70px;
     display: flex;
@@ -91,7 +92,8 @@ input[type=button]:active{
     text-align: center;
 }
 .sidebar-menu{
-    background-color: red;
+    background-color: #f4f4f1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
     width: 400px;
     max-width: 100%;
     height: 100%;
@@ -275,10 +277,10 @@ input[type=button]:active{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 70px;
     position: relative;
     border: solid 1px;
-    margin: 50px 0px;
+    margin: 70px 0px;
     padding: 15px;
 }
 .main-header{
@@ -378,6 +380,11 @@ input[type=button]:active{
     align-items: center;
     gap: 50px;
 }
+.bestseller-content a,
+.trending-content a{
+    border: solid 1px;
+    padding: 15px;
+}
 .product-container,
 .category-container{
     width: 1280px;
@@ -409,9 +416,10 @@ input[type=button]:active{
     justify-content: space-between;
 }
 .footer{
+    background-color: #f4f4f1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 100%;
     padding: 20px 0;
-    background-color: blue;
     text-align: center;
 }
 .footer-description{
