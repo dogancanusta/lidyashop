@@ -627,18 +627,22 @@
         });
     </script>
     <script>
-      document.onreadystatechange = function() {
-  let lastScrollPosition = 0;
-  const navbar = document.querySelector('.header');
-  window.addEventListener('scroll', function(e) {
-    lastScrollPosition = window.scrollY;
-    
-    if (lastScrollPosition > 80)
-      navbar.classList.add('header-scroll');
-    else
-      navbar.classList.remove('header-scroll');
-  });
-}
+        document.onreadystatechange = function () {
+            let lastScrollPosition = 0;
+            const navbar = document.querySelector('.header');
+            const sidebar = document.querySelector('.sidebar-menu');
+            window.addEventListener('scroll', function (e) {
+                lastScrollPosition = window.scrollY;
+
+                if (lastScrollPosition > 80){
+                    navbar.classList.add('header-scroll');
+                    sidebar.classList.add('sidebar-menu-scroll');
+                }else{
+                    navbar.classList.remove('header-scroll');
+                    sidebar.classList.remove('sidebar-menu-scroll');
+                }
+            });
+        }
     </script>
 </body>
 

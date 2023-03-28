@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #f4f4f1;
+    background-color: #ede7e3;
 }
 a{
     text-decoration: none;
@@ -71,8 +71,7 @@ input[type=button]:active{
     align-items: center;
 }
 .header{
-    background-color: #f4f4f1;
-    
+    background-color: #ede7e3;
     width: 100%;
     height: 70px;
     display: flex;
@@ -84,8 +83,9 @@ input[type=button]:active{
     z-index: 999999;
 }
 .header-scroll{
+    background-color: #f5f2ef;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: all .3s;
+    transition: all .2s;
 }
 .header-left,
 .header-right{
@@ -96,8 +96,7 @@ input[type=button]:active{
     text-align: center;
 }
 .sidebar-menu{
-    background-color: #f4f4f1;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
+    background-color: #ede7e3;
     width: 400px;
     max-width: 100%;
     height: 100%;
@@ -107,6 +106,11 @@ input[type=button]:active{
     transform: translateX(-400px);
     transition: all .3s;
     padding-top: 5px;
+}
+.sidebar-menu-scroll{
+    background-color: #f5f2ef;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
+    transition: all .2s;
 }
 .sidebar-menulist li{
     list-style: none;
@@ -489,7 +493,7 @@ input[type="radio"]{
     justify-content: space-between;
 }
 .footer{
-    background-color: #f4f4f1;
+    background-color: #f5f2ef;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 100%;
     padding: 20px 0;
