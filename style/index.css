@@ -439,7 +439,7 @@ input[type=button]:active{
     display: none;
 }
 .cardslider-dots{
-    background-color: red;
+    /* background-color: red; */
     height: 100%;
     position: absolute;
     top: 0;
@@ -447,13 +447,19 @@ input[type=button]:active{
     border: solid 2px;
 }
 .cardslider-dots label{
+    /* background-color: #f1dae0; */
     float: left;
+    position: relative;
     height: 40px;
     width: 40px;
     border-radius: 50%;
     text-align: center;
-    background: #f1dae0;
     cursor: pointer;
+}
+.cardslider-dots b{
+    position: absolute;
+    top: 10px;
+    left: 17px;
 }
 input[type="radio"]{
     display: none;
