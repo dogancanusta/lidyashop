@@ -281,7 +281,22 @@ input[type=button]:active{
     position: relative;
     border: solid 1px;
     margin: 70px 0px;
-    padding: 15px;
+    padding: 0px 15px;
+}
+.product-container,
+.category-container,
+.product-main,
+#ones:checked~.product-main .cards:nth-child(1),
+#twos:checked~.product-main .cards:nth-child(2),
+#threes:checked~.product-main .cards:nth-child(3){
+    width: 1280px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    animation: scale 0.5s;
 }
 .main-header{
     width: 100%;
@@ -378,25 +393,75 @@ input[type=button]:active{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 70px;
 }
 .bestseller-content a,
 .trending-content a{
-    border: solid 1px;
-    padding: 15px;
+	display: inline-block;
+	width: 150px;
+    max-width: 150px;
+	padding: 15px 0;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: 2px solid #F44336;
+	position: relative;
+	color: #F44336;
+	margin-top: 10px;
+	transition: 0.2s ease-in-out color;
 }
-.product-container,
-.category-container{
-    width: 1280px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
+.bestseller-content a::before,
+.trending-content a::before{
+	content: " ";
+	display: block;
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #F44336;
+	border-radius: 100%;
+	z-index: -10;
+	transform: scale(0);
+	transition: 0.4s ease-in-out transform;
+}
+.bestseller-content a:hover,
+.trending-content a:hover{
+	color: #fff;
+}
+.bestseller-content a:hover::before,
+.trending-content a:hover::before{
+	transform: scale(1.5);
+}
+.cards {
+    display: none;
+}
+.cardslider-dots{
+    background-color: red;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    border: solid 2px;
+}
+.cardslider-dots label{
+    float: left;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background: #f1dae0;
+    cursor: pointer;
+}
+input[type="radio"]{
+    display: none;
 }
 .card{
     flex: 1 1 300px;
     position: relative;
+    border: solid 1px;
 }
 .card-header{
     position: absolute;
@@ -469,6 +534,14 @@ input[type=button]:active{
     cursor: pointer;
 }
 @media (max-width: 768px){
+    .bestsellertrending-container,
+    .bestseller,
+    .trending{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
     .sidebar-menu{
         width: 100%;
         transform: translateX(-100%);
