@@ -438,7 +438,10 @@ input[type=button]:active{
     align-items: center;
     gap: 70px;
     background-color: #82c0cc;
-    padding: 15px 0px;
+    background-image: radial-gradient(#ccc 2px, transparent 2px), radial-gradient(#ccc 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    background-color: #82c0cc;
 }
 .bestseller-content a,
 .trending-content a{
