@@ -5,9 +5,51 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #ede7e3;
+html {
+    height: 100%;
+    --sz: 10px;
+    /*** size ***/
+    --c0: #e6e1dc;
+    --c1: #fff;
+    --c2: #f5f2ef;
+    --c3: #ede7e3;
+    
+    --ts: 50%/ calc(var(--sz) * 12.8) calc(var(--sz) * 22);
+    background:
+        /*bottom*/
+        conic-gradient(from 120deg at 50% 86.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+        conic-gradient(from 120deg at 50% 86.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+        /*bottom dark*/
+        conic-gradient(from 120deg at 50% 74%, var(--c0) 0 120deg, #fff0 0 360deg) var(--ts),
+        /*right*/
+        conic-gradient(from 60deg at 60% 50%, var(--c1) 0 60deg, var(--c2) 0 120deg, #fff0 0 360deg) var(--ts),
+        /*left*/
+        conic-gradient(from 180deg at 40% 50%, var(--c3) 0 60deg, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+        /*top dark*/
+        conic-gradient(from 0deg at 90% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+        conic-gradient(from -90deg at 10% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+        conic-gradient(from 0deg at 90% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+        conic-gradient(from -90deg at 10% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+        /*top*/
+        conic-gradient(from -60deg at 50% 13.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+        conic-gradient(from -60deg at 50% 13.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+        conic-gradient(from -60deg at 50% 41%, var(--c2) 0 60deg, var(--c3) 0 120deg, #fff0 0 360deg) var(--ts),
+        var(--c0);
 }
+/* html{
+    --s: 105px;
+    --c1: #ebe4e0;
+    --c2: #ede7e3;
+    --c3: #f5f2ef;
+
+    background:
+        conic-gradient(from 75deg, var(--c1) 15deg, var(--c2) 0 30deg, #0000 0 180deg,
+            var(--c2) 0 195deg, var(--c1) 0 210deg, #0000 0) calc(0.5*var(--s)) calc(0.5*var(--s)/0.577),
+        conic-gradient(var(--c1) 30deg, var(--c3) 0 75deg, var(--c1) 0 90deg, var(--c2) 0 105deg,
+            var(--c3) 0 150deg, var(--c2) 0 180deg, var(--c3) 0 210deg, var(--c1) 0 256deg,
+            var(--c2) 0 270deg, var(--c1) 0 286deg, var(--c2) 0 331deg, var(--c3) 0);
+    background-size: var(--s) calc(var(--s)/0.577);
+} */
 a{
     text-decoration: none;
     color: #000;
@@ -71,7 +113,9 @@ input[type=button]:active{
     align-items: center;
 }
 .header{
-    background-color: #ede7e3;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     width: 100%;
     height: 100%;
     display: flex;
@@ -84,9 +128,8 @@ input[type=button]:active{
     z-index: 999999;
 }
 .header-scroll{
-    background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: all .2s;
+    transition: all .3s;
 }
 .header-left,
 .header-right{
@@ -116,11 +159,11 @@ input[type=button]:active{
     transition: all .3s;
     padding-top: 5px;
 }
-.sidebar-menu-scroll{
+/* .sidebar-menu-scroll{
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
     transition: all .2s;
-}
+} */
 .sidebar-menulist li{
     list-style: none;
     color: #000;
@@ -297,7 +340,6 @@ input[type=button]:active{
     gap: 70px;
     position: relative;
     margin: 70px 0px;
-    padding: 0px 15px;
 }
 .product-container,
 .category-container,
@@ -410,6 +452,8 @@ input[type=button]:active{
     justify-content: space-between;
     align-items: center;
     gap: 70px;
+    background-color: #82c0cc;
+    padding: 15px 0px;
 }
 .bestseller-content a,
 .trending-content a{
@@ -495,6 +539,7 @@ input[type="radio"]{
     line-height: 35px;
     border-top: solid 1px;
     padding: 20px;
+    background-color: rgb(255, 255, 255, 0.5);
 }
 .link-group{
     display: flex;
@@ -520,7 +565,9 @@ input[type="radio"]{
     transition: all 0.3s;
 }
 .footer{
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 100%;
     padding: 20px 0;
