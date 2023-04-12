@@ -438,7 +438,7 @@ input[type=button]:active{
     align-items: center;
     gap: 70px;
     background-color: #82c0cc;
-    background-image: radial-gradient(#ccc 2px, transparent 2px), radial-gradient(#ccc 2px, transparent 2px);
+    background-image: radial-gradient(#ddd 2px, transparent 2px), radial-gradient(#ddd 2px, transparent 2px);
     background-size: 32px 32px;
     background-position: 0 0, 16px 16px;
     background-color: #82c0cc;
@@ -521,6 +521,17 @@ input[type="radio"]{
     top: 0;
     left: 0;
     padding: 20px;
+    z-index: 1;
+}
+.card-img{
+    overflow: hidden;
+}
+.card-img img{
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.card-img img:hover{
+  transform: scale(1.03);
 }
 .card-body,
 .card-footer{
@@ -534,23 +545,42 @@ input[type="radio"]{
     flex-direction: row;
     justify-content: space-between;
 }
-.brand-container{
+.brandslider-container{
+    background: white;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
     width: 100%;
+    
+}
+.brandslider-container::before,
+.brandslider-container::after{
+    background: red;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+    
+}
+.brandslider-container::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+.brandslider-container::before{
+    left: 0;
+    top: 0;
+}
+.brandslider-container .brandslider{
+    animation: s_scroll 20s linear infinite;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-    flex-wrap: wrap;
+    width: calc(250px * 14);
 }
-.brandlist-item{
-    flex: 1 1 200px;
-}
-.brandlist-item img{
-    border-radius: 50%;
-}
-.brand-container:hover .brandlist-item:not(:hover){
-    opacity: .35;
-    transition: all 0.3s;
+.brandslider-container .brandslider-item{
+    height: 100px;
+    width: 250px;
 }
 .footer{
     background: rgba(255, 255, 255, 0.2);
@@ -635,12 +665,21 @@ input[type="radio"]{
         width: 100%;
     }
 }
-
 @keyframes scale{
     0%{
         transform: scale(0.9);
     }
     100%{
         transform: scale(1);
+    }
+}
+@keyframes s_scroll{
+    0%{
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100%{
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
     }
 }
