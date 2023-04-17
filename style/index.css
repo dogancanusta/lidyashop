@@ -165,42 +165,160 @@ input[type=button]:active{
     display: none;
 }
 .toggle{
-    cursor: pointer;
-    position: absolute;
-    z-index: 99;
-    height: 100%;
-    width: 100%;
-    top: 28px;
-    left: 15px;
-    height: 25px;
-    width: 25px;
+	position: relative;
+    left: 20px;
+	width: 30px;
+	height: 30px;
+	display: block;
+	cursor: pointer;
 }
-.hamburger{
-    transition: all 0.3s;
-    position: absolute;
-    width: 100%;
-    border: solid 1px;
-    background-color: #000;
+.toggle:before,
+input[type=checkbox]:checked + .toggle:before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+	width: 30px;
+	height: 4px;
+	border-radius: 2px;
+	background: #000;
 }
-.horizontal{
-    margin: 5px 0px;
+.toggle:before{
+	-webkit-animation: animationOneReverse 1s ease forwards;
+	animation: animationOneReverse 1s ease forwards;
 }
-.diagonal.part-1,
-.horizontal,
-.diagonal.part-2{
-    position: relative;
-    float: left;
+@-webkit-keyframes animationOneReverse{
+	0% { -webkit-transform: rotate(315deg); }
+	25% { -webkit-transform: rotate(360deg); }
+	50%, 100% { -webkit-transform: rotate(0deg); }
 }
-.header-left input[type=checkbox]:checked~.toggle>.diagonal.part-1{
-    transform: rotate(135deg);
-    margin-top: 9px;
+@keyframes animationOneReverse{
+	0% { transform: rotate(315deg); }
+	25% { transform: rotate(360deg); }
+	50%, 100% { transform: rotate(0deg); }
 }
-.header-left input[type=checkbox]:checked~.toggle>.horizontal{
-    opacity: 0;
+input[type=checkbox]:checked + .toggle:before{
+	-webkit-animation: animationOne 1s ease forwards;
+	animation: animationOne 1s ease forwards;
 }
-.header-left input[type=checkbox]:checked~.toggle>.diagonal.part-2{
-    transform: rotate(-135deg);
-    margin-top: -13px;
+@-webkit-keyframes animationOne{
+	0%, 50% { -webkit-transform: rotate(0deg); }
+	75% { -webkit-transform: rotate(360deg); }
+	100% { -webkit-transform: rotate(315deg); }
+}
+@keyframes animationOne{
+	0%, 50% { transform: rotate(0deg); }
+	75% { transform: rotate(360deg); }
+	100% { transform: rotate(315deg); }
+}
+.toggle:after,
+input[type=checkbox]:checked + .toggle:after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+	width: 30px;
+	height: 4px;
+	border-radius: 2px;
+	background: #000;
+}
+.toggle:after{
+	-webkit-animation: animationTwoReverse 1s ease forwards;
+	animation: animationTwoReverse 1s ease forwards;
+}
+@-webkit-keyframes animationTwoReverse{
+	0% { -webkit-transform: rotate(405deg); }
+	25% { -webkit-transform: rotate(450deg); }
+	50%, 100% { -webkit-transform: rotate(0deg); }
+}
+@keyframes animationTwoReverse {
+	0% { transform: rotate(405deg); }
+	25% { transform: rotate(450deg); }
+	50%, 100% { transform: rotate(0deg); }
+}
+input[type=checkbox]:checked + .toggle:after{
+	-webkit-animation: animationTwo 1s ease forwards;
+	animation: animationTwo 1s ease forwards;
+}
+@-webkit-keyframes animationTwo{
+	0%, 50% { -webkit-transform: rotate(0deg); }
+	75% { -webkit-transform: rotate(450deg); }
+	100% { -webkit-transform: rotate(405deg); }
+}
+@keyframes animationTwo{
+	0%, 50% { transform: rotate(0deg); }
+	75% { transform: rotate(450deg); }
+	100% { transform: rotate(405deg); }
+}
+.toggle .burger:before{
+	content: '';
+	position: absolute;
+	top: 5px;
+	width: 30px;
+	height: 4px;
+	border-radius: 2px;
+	background: #000;
+	-webkit-animation: animationBurgerTopReverse 1s ease forwards;
+	animation: animationBurgerTopReverse 1s ease forwards;
+}
+@-webkit-keyframes animationBurgerTopReverse{
+	0%, 50% { -webkit-transform: translateY(12px); opacity: 0; }
+	51% { -webkit-transform: translateY(12px); opacity: 1; }
+	100% { -webkit-transform: translateY(0px); opacity: 1; }
+}
+@keyframes animationBurgerTopReverse{
+	0%, 50% { transform: translateY(12px); opacity: 0; }
+	51% { transform: translateY(12px); opacity: 1; }
+	100% { transform: translateY(0px); opacity: 1; }
+}
+input[type=checkbox]:checked + .toggle .burger:before{
+	-webkit-animation: animationBurgerTop 1s ease forwards;
+	animation: animationBurgerTop 1s ease forwards;
+}
+@-webkit-keyframes animationBurgerTop{
+	0% { -webkit-transform: translateY(0px); opacity: 1; }
+	50% { -webkit-transform: translateY(12px); opacity: 1; }
+	51%, 100% { -webkit-transform: translateY(12px); opacity: 0; }
+}
+@keyframes animationBurgerTop{
+	0% { transform: translateY(0px); opacity: 1; }
+	50% { transform: translateY(12px); opacity: 1; }
+	51%, 100% { transform: translateY(12px); opacity: 0; }
+}
+.toggle .burger:after{
+	content: '';
+	position: absolute;
+	bottom: 5px;
+	width: 30px;
+	height: 4px;
+	border-radius: 2px;
+	background: #000;
+	-webkit-animation: animationBurgerBottomReverse 1s ease forwards;
+	animation: animationBurgerBottomReverse 1s ease forwards;
+}
+@-webkit-keyframes animationBurgerBottomReverse{
+	0%, 50% { -webkit-transform: translateY(-12px); opacity: 0; }
+	51% { -webkit-transform: translateY(-12px); opacity: 1; }
+	100% { -webkit-transform: translateY(0px); opacity: 1; }
+}
+@keyframes animationBurgerBottomReverse{
+	0%, 50% { transform: translateY(-12px); opacity: 0; }
+	51% { transform: translateY(-12px); opacity: 1; }
+	100% { transform: translateY(0px); opacity: 1; }
+}
+input[type=checkbox]:checked + .toggle .burger:after{
+	-webkit-animation: animationBurgerBottom 1s ease forwards;
+	animation: animationBurgerBottom 1s ease forwards;
+}
+@-webkit-keyframes animationBurgerBottom{
+	0% { -webkit-transform: translateY(0px); opacity: 1; }
+	50% { -webkit-transform: translateY(-12px); opacity: 1; }
+	51%, 100% { -webkit-transform: translateY(-12px); opacity: 0; }
+}
+@keyframes animationBurgerBottom{
+	0% { transform: translateY(0px); opacity: 1; }
+	50% { transform: translateY(-12px); opacity: 1; }
+	51%, 100% { transform: translateY(-12px); opacity: 0; }
 }
 .tab{
     display: inline-block;
@@ -245,9 +363,11 @@ input[type=button]:active{
     transition: all .3s;
     overflow: auto;
     color: #fff;
+    padding: 50px 0px;
 }
 .modal:before{
-    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
     display: block;
     content: "";
     left: 0;
@@ -255,14 +375,13 @@ input[type=button]:active{
     width: 100%;
     height: 100%;
     z-index: 998;
-    background-color: rgb(0, 0, 0, 0.9);
     cursor: default;
 }
 .modal-body{
     position: relative;
+    
     z-index: 999;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(5px);
     width: 500px;
     max-width: 100%;
@@ -556,7 +675,7 @@ input[type="radio"]{
     justify-content: space-between;
 }
 .brandslider-container{
-    max-width: 100%;
+    width: 100%;
     position: relative;
 }
 .brandslider-activator{
