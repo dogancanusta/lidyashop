@@ -16,16 +16,10 @@
     <div class="container">
         <div class="header">
             <div class="header-left">
-                <!-- <input type="checkbox" class="open-toggle" id="open-toggle">
+                <input type="checkbox" id="open-toggle" class="toggle-open">
                 <label for="open-toggle" class="toggle">
-                    <span class="hamburger diagonal part-1"></span>
-                    <span class="hamburger horizontal"></span>
-                    <span class="hamburger diagonal part-2"></span>
-                </label> -->
-
-                <input id="click" name="exit" type="checkbox" />
-                <label for="click" class="toggle"><span class="burger"></span></label>
-                    
+                    <span class="hamburger"></span>
+                </label>
                 <div class="sidebar-menu">
                     <div class="sidebar-tab">
                         <input class="radio" id="tab-one" name="group" type="radio" checked>
@@ -88,22 +82,60 @@
                             </div>
                             <div class="modal-content" id="my-modal-desc">
                                 <form action="">
-                                    <label for="">İsimi</label>
-                                    <input type="text" name="" id="">
-                                    <label for="">Soyisim</label>
-                                    <input type="text" name="" id="">
+                                    <div class="namesurname">
+                                        <label for="">
+                                            İsim
+                                            <input type="text" name="" id="" placeholder="İsim">
+                                        </label>
+                                        <label for="">
+                                            Soyisim
+                                            <input type="text" name="" id="" placeholder="Soyisim">
+                                        </label>
+                                    </div>
                                     <label for="">E-Posta</label>
-                                    <input type="email" name="" id="">
-                                    <label for="">Şifre</label>
-                                    <input type="password" name="" id="">
-                                    <label for="">Şifre(tekrar)</label>
-                                    <input type="password" name="" id="">
-                                    <label for="">İl</label>
-                                    <input type="text" name="" id="">
-                                    <label for="">İlçe</label>
-                                    <input type="text" name="" id="">
-                                    <label for="">Cinsiyet</label>
-                                    <input type="text" name="" id="">
+                                    <input type="email" name="" id="" placeholder="E-Posta">
+                                    <div class="passwordrpassword">
+                                        <label for="">
+                                            Şifre
+                                            <input type="password" name="" id="" placeholder="Şifre">
+                                        </label>
+                                        <label for="">
+                                            Şifre(tekrar)
+                                            <input type="password" name="" id="" placeholder="Şifre(tekrar)">
+                                        </label>
+                                    </div>
+                                    <div class="citycounty">
+                                        <label for="">
+                                            İl
+                                            <div class="select">
+                                                <select>
+                                                    <option value="1">Pure CSS Select</option>
+                                                    <option value="2">No JS</option>
+                                                    <option value="3">Nice!</option>
+                                                </select>
+                                            </div>
+                                        </label>
+                                        <label for="">
+                                            İlçe
+                                            <div class="select">
+                                                <select>
+                                                    <option value="1">Pure CSS Select</option>
+                                                    <option value="2">No JS</option>
+                                                    <option value="3">Nice!</option>
+                                                </select>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="gender">
+                                        <div class="gender-header">
+                                            <label for="">Cinsiyet</label>
+                                        </div>
+                                        <div class="gender-content">
+                                            <input type="radio" id="featured-1" name="featured"><label for="featured-1">Kadın</label>
+                                            <input type="radio" id="featured-2" name="featured"><label for="featured-2">Erkek</label>
+                                            <input type="radio" id="featured-3" name="featured"><label for="featured-3">Diğer</label>
+                                        </div>
+                                    </div>
                                     <input type="submit" value="Kayıt Ol">
                                 </form>
                             </div>
@@ -137,7 +169,7 @@
                                     <input type="submit" value="Giriş Yap">
                                     <label for=""><input type="checkbox" name="" id="" checked><span> Beni
                                             Hatırla</span></label>
-                                    <a href="" style="float: right;">Şifremi Unuttum</a>
+                                    <a href="" style="float: right;"><i class="fa fa-question"></i> Şifremi Unuttum</a>
                                 </form>
                             </div>
                             <div class="modal-footer">
@@ -587,9 +619,8 @@
                 </div>
             </div>
             <div class="brandslider-container">
-                <input class="brandslider-activator" id="brandslider-activator-1" name="carousel" type="radio">
-                <input class="brandslider-activator" id="brandslider-activator-2" name="carousel" type="radio" checked="checked">
-                <input class="brandslider-activator" id="brandslider-activator-3" name="carousel" type="radio">
+                <input class="brandslider-activator" id="brandslider-activator-1" name="carousel" type="radio" checked="checked">
+                <input class="brandslider-activator" id="brandslider-activator-2" name="carousel" type="radio">
             
                 <div class="brandslider-controls">
                     <label class="brandslider-control brandslider-control-next" for="brandslider-activator-2">
@@ -600,9 +631,6 @@
                     <label class="brandslider-control brandslider-control-prev" for="brandslider-activator-1">
                         <i class="fa fa-angle-left"></i>
                     </label>
-                    <label class="brandslider-control brandslider-control-next" for="brandslider-activator-3">
-                        <i class="fa fa-angle-right"></i>
-                    </label>
                 </div>
                 <div class="brandslider-controls">
                     <label class="brandslider-control brandslider-control-prev" for="brandslider-activator-2">
@@ -611,21 +639,6 @@
                 </div>
                 <div class="brandslider-screen">
                     <div class="brandslider-track">
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
                         <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
                             <div class="brandslider-img">
                                 <img src="https://picsum.photos/100/100" alt="">
@@ -708,13 +721,10 @@
             </div>
             <div class="footer-bottom">
                 <span class="left">
-                    Copyright &copy; 2023 <a href="#"> dgncnusta </a>
+                    <span>Version 1.x</span>
                 </span>
                 <div class="right">
-                    <a href="#"> Home </a>
-                    <a href="#"> About </a>
-                    <a href="#"> Contact </a>
-                    <a href="#"> Blog </a>
+                    Copyright &copy; 2023 <a href="#"> dgncnusta </a>
                 </div>
             </div>
         </div>
