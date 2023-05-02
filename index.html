@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/root.css">
 
     <title>Anasayfa</title>
 </head>
-
 <body>
-    <div class="asd">
-        sdf
-    </div>
-    <!-- <div class="checkbox-wrapper">
-        <input type="checkbox" id="check" name="check" value="" />
-        <label for="check">
-            <span></span>Checkbox
-        </label>
-    </div> -->
     <div class="container">
         <div class="header">
             <div class="header-left">
@@ -31,10 +22,10 @@
                 </label>
                 <div class="sidebar-menu">
                     <div class="sidebar-tab">
-                        <input class="radio" id="tab-one" name="group" type="radio" checked>
-                        <input class="radio" id="tab-two" name="group" type="radio">
-                        <input class="radio" id="tab-three" name="group" type="radio">
-
+                        <input class="tab-radio" id="tab-one" name="group" type="radio" checked>
+                        <input class="tab-radio" id="tab-two" name="group" type="radio">
+                        <input class="tab-radio" id="tab-three" name="group" type="radio">
+        
                         <div class="tabs">
                             <label class="tab" id="one-tab" for="tab-one">Tab1</label>
                             <label class="tab" id="two-tab" for="tab-two">Tab2</label>
@@ -70,141 +61,183 @@
                             </div>
                         </div>
                     </div>
+                    <div class="logo">
+                        <img src="style/img/logo2_preview_rev_12 kopya.png" alt="" width="123" height="65">
+                    </div>
                 </div>
             </div>
-            <div class="logo">
-                <img src="style/img/logo2_preview_rev_12 kopya.png" alt="" width="123" height="65">
-            </div>
+            <div class="serchbar-container">
+                <div class="search-bar">
+                  <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Arama" value="" />
+                  <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
             <div class="header-right">
-                <div class="register-container">
-                    <label for="register-modal" class="modal-toggle" data-toggle="modal" aria-controls="register-modal"
-                        aria-label="Open modal">Kayıt Ol</label>
-                    <input type="checkbox" id="register-modal" value="" class="modal-checkbox" value="register-modal">
-                    <div class="modal" role="dialog" aria-labelledby="my-modal-title" aria-describedby="my-modal-desc">
-                        <div class="modal-body" tabindex="0">
-                            <div class="modal-header">
-                                <label for="register-modal" class="modal-close" data-toggle="modal"
-                                    aria-controls="register-modal" aria-label="Close modal" tabindex="0">
-                                    <span class="fa fa-close" aria-hidden="true"></span>
-                                </label>
-                                <h2 id="my-modal-title">Kayıt Ol</h2>
+                <div class="loginregister-container">
+                    <input id="tab-1" type="checkbox" name="asd">
+                    <label for="tab-1" class="loginregister-tab">Hesabım</label>
+        
+                    <div class="tab-content">
+                        <div class="login-container">
+                            <input type="checkbox" id="login-modal">
+                            <label for="login-modal" class="btn">Giriş Yap</label>
+        
+                            <div class="modal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title">Giriş Yap</h1>
+                                        <label for="login-modal" class="close" style="width: 70px;"><i class="fa fa-close"
+                                                style="font-size: 18px;"></i></label>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="input-group">
+                                            <div class="input-item">
+                                                <label for="email">*E-Posta</label>
+                                                <input type="email" name="" id="email">
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-item">
+                                                <label for="password">*Şifre</label>
+                                                <input type="password" name="" id="password">
+                                            </div>
+                                        </div>
+                                        <!-- <div class="input-group">
+                                                    <div class="input-item">
+                                                        <div class="input-checkbox">
+                                                            <input type="checkbox" class="checkbox">
+                                                            Butter
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-item">
+                                                        <div class="input-checkbox">
+                                                            <input type="checkbox" class="checkbox">
+                                                            Butter
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                        <div class="input-group" style="margin: 10px 0px">
+                                            <div style="float: left;">
+                                                <input type="checkbox" name="" id="remember" checked><label for="remember"> Beni
+                                                    Hatırla</label>
+                                            </div>
+                                            <div style="float: right;">
+                                                <a href="forget-password.php">Şifremi Unuttum</a>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="submit" name="" id="" value="Giriş Yap">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h1 class="modal-title">&nbsp;</h1>
+                                        <label for="login-modal" class="close" style="width: 130px;">Kapat</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modal-content" id="my-modal-desc">
-                                <form action="">
-                                    <div class="namesurname">
-                                        <label for="">
-                                            İsim
-                                            <input type="text" name="" id="" placeholder="İsim">
-                                        </label>
-                                        <label for="">
-                                            Soyisim
-                                            <input type="text" name="" id="" placeholder="Soyisim">
-                                        </label>
+                        </div>
+                        <div class="register-container">
+                            <input type="checkbox" id="register-modal">
+                            <label for="register-modal" class="btn">Kayıt Ol</label>
+        
+                            <div class="modal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title">Kayıt Ol</h1>
+                                        <label for="register-modal" class="close" style="width: 70px;"><i class="fa fa-close"
+                                                style="font-size: 18px;"></i></label>
                                     </div>
-                                    <label for="">E-Posta</label>
-                                    <input type="email" name="" id="" placeholder="E-Posta">
-                                    <div class="passwordrpassword">
-                                        <label for="">
-                                            Şifre
-                                            <input type="password" name="" id="" placeholder="Şifre">
-                                        </label>
-                                        <label for="">
-                                            Şifre(tekrar)
-                                            <input type="password" name="" id="" placeholder="Şifre(tekrar)">
-                                        </label>
-                                    </div>
-                                    <label for="">Telefon</label>
-                                    <input type="tel" name="" id="" placeholder="Telefon">
-                                    <div class="citycounty">
-                                        <label for="">
-                                            İl
-                                            <div class="select">
+                                    <div class="modal-body">
+                                        <div class="input-group">
+                                            <div class="input-item">
+                                                <label for="firsName">*Adı</label>
+                                                <input type="text" name="" id="firsName">
+                                            </div>
+                                            <div class="input-item">
+                                                <label for="lastName">Soyadı</label>
+                                                <input type="text" name="" id="lastName">
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-item">
+                                                <label for="email">*E-Posta</label>
+                                                <input type="email" name="" id="email">
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-item">
+                                                <label for="password">*Şifre</label>
+                                                <input type="password" name="" id="password">
+                                            </div>
+                                            <div class="input-item">
+                                                <label for="rPassword">*Şifre(tekrar)</label>
+                                                <input type="password" name="" id="rPassword">
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-item">
+                                                <label for="tel">Telefon</label>
+                                                <input type="tel" name="" id="tel">
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-item">
+                                                <label for="city">İl</label>
                                                 <select>
                                                     <option value="1">Pure CSS Select</option>
                                                     <option value="2">No JS</option>
                                                     <option value="3">Nice!</option>
                                                 </select>
                                             </div>
-                                        </label>
-                                        <label for="">
-                                            İlçe
-                                            <div class="select">
+                                            <div class="input-item">
+                                                <label for="county">İlçe</label>
                                                 <select>
                                                     <option value="1">Pure CSS Select</option>
                                                     <option value="2">No JS</option>
                                                     <option value="3">Nice!</option>
                                                 </select>
                                             </div>
-                                        </label>
-                                    </div>
-                                    <div class="gender">
-                                        <div class="gender-header">
-                                            <label for="">Cinsiyet</label>
                                         </div>
-                                        <div class="gender-content">
-                                            <div class="radio-wrapper">
-                                                <input type="radio" id="radio-1" name="radio" value="">
-                                                <label for="radio-1">
-                                                    <span></span>Kadın
-                                                </label>
+                                        <div class="input-group">
+                                            <div class="input-item">
+                                                <label for="gender">Cinsiyet</label>
+                                                <div class="input-radio">
+                                                    <input type="radio" class="radio" name="radioBtn">
+                                                    Kadın
+                                                </div>
                                             </div>
-                                            <div class="radio-wrapper">
-                                                <input type="radio" id="radio-2" name="radio" value="">
-                                                <label for="radio-2">
-                                                    <span></span>Erkek
-                                                </label>
+                                            <div class="input-item">
+                                                <label for="clearfix">&nbsp;</label>
+                                                <div class="input-radio">
+                                                    <input type="radio" class="radio" name="radioBtn">
+                                                    Erkek
+                                                </div>
                                             </div>
-                                            <div class="radio-wrapper">
-                                                <input type="radio" id="radio-3" name="radio" value="">
-                                                <label for="radio-3">
-                                                    <span></span>Diğer
-                                                </label>
+                                            <div class="input-item">
+                                                <label for="clearfix">&nbsp;</label>
+                                                <div class="input-radio">
+                                                    <input type="radio" class="radio" name="radioBtn">
+                                                    Diğer
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="input-group">
+                                            <input type="submit" name="" id="" value="Kaydet">
+                                        </div>
                                     </div>
-                                    <input type="submit" value="Kayıt Ol">
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <div></div>
-                                <label for="register-modal" class="modal-toggle" data-toggle="modal"
-                                    aria-controls="register-modal" aria-label="Close modal" tabindex="0">Kapat</label>
+                                    <div class="modal-footer">
+                                        <h1 class="modal-title">&nbsp;</h1>
+                                        <label for="register-modal" class="close" style="width: 130px;">Kapat</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="login-container">
-                    <label for="login-modal" class="modal-toggle" data-toggle="modal" aria-controls="login-modal"
-                        aria-label="Open modal">Giriş Yap</label>
-                    <input type="checkbox" id="login-modal" value="" class="modal-checkbox" value="login-modal">
-                    <div class="modal" role="dialog" aria-labelledby="my-modal-title" aria-describedby="my-modal-desc">
-                        <div class="modal-body" tabindex="0">
-                            <div class="modal-header">
-                                <label for="login-modal" class="modal-close" data-toggle="modal"
-                                    aria-controls="login-modal" aria-label="Close modal" tabindex="0">
-                                    <span class="fa fa-close" aria-hidden="true"></span>
-                                </label>
-                                <h2 id="my-modal-title">Giriş Yap</h2>
-                            </div>
-                            <div class="modal-content" id="my-modal-desc">
-                                <form action="">
-                                    <label for="">Kullanıcı Adı</label>
-                                    <input type="text" name="" id="">
-                                    <label for="">Şifre</label>
-                                    <input type="password" name="" id="">
-                                    <input type="submit" value="Giriş Yap">
-                                    <label for=""><input type="checkbox" name="" id="" checked><span> Beni
-                                            Hatırla</span></label>
-                                    <a href="" style="float: right;"><i class="fa fa-question"></i> Şifremi Unuttum</a>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <div></div>
-                                <label for="login-modal" class="modal-toggle" data-toggle="modal"
-                                    aria-controls="login-modal" aria-label="Close modal" tabindex="0">Kapat</label>
-                            </div>
-                        </div>
-                    </div>
+                <div class="basket-container">
+                    <a href=""><i class="fa fa-shopping-cart"></i></a>
                 </div>
             </div>
         </div>
@@ -261,83 +294,40 @@
                     </div>
                 </div>
                 <div class="category">
-                    <div class="category-content">
-                        <a href="" target="">
-                            <div class="category-overlay"></div>
-                            <img class="category-image" src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="" width="100%"
-                                height="350">
-                            <div class="category-details fadeIn-bottom">
-                                <h3 class="category-title">This is a title</h3>
-                                <p class="category-text">This is a short description</p>
-                            </div>
-                        </a>
+                    <div class="category-img">
+                        <img src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="CategoryImage" width="100%" height="350">
                     </div>
+                    <a href="#" class="category-hover"></a>
                 </div>
                 <div class="category">
-                    <div class="category-content">
-                        <a href="" target="">
-                            <div class="category-overlay"></div>
-                            <img class="category-image" src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="" width="100%"
-                                height="350">
-                            <div class="category-details fadeIn-right">
-                                <h3 class="category-title">This is a title</h3>
-                                <p class="category-text">This is a short description</p>
-                            </div>
-                        </a>
+                    <div class="category-img">
+                        <img src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="CategoryImage" width="100%" height="350">
                     </div>
+                    <a href="#" class="category-hover"></a>
                 </div>
                 <div class="category">
-                    <div class="category-content">
-                        <a href="" target="">
-                            <div class="category-overlay"></div>
-                            <img class="category-image" src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="" width="100%"
-                                height="350">
-                            <div class="category-details fadeIn-bottom">
-                                <h3 class="category-title">This is a title</h3>
-                                <p class="category-text">This is a short description</p>
-                            </div>
-                        </a>
+                    <div class="category-img">
+                        <img src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="CategoryImage" width="100%" height="350">
                     </div>
-                </div>
-
-                <div class="category">
-                    <div class="category-content">
-                        <a href="" target="">
-                            <div class="category-overlay"></div>
-                            <img class="category-image" src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="" width="100%"
-                                height="350">
-                            <div class="category-details fadeIn-top">
-                                <h3 class="category-title">This is a title</h3>
-                                <p class="category-text">This is a short description</p>
-                            </div>
-                        </a>
-                    </div>
+                    <a href="#" class="category-hover"></a>
                 </div>
                 <div class="category">
-                    <div class="category-content">
-                        <a href="" target="">
-                            <div class="category-overlay"></div>
-                            <img class="category-image" src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="" width="100%"
-                                height="350">
-                            <div class="category-details fadeIn-left">
-                                <h3 class="category-title">This is a title</h3>
-                                <p class="category-text">This is a short description</p>
-                            </div>
-                        </a>
+                    <div class="category-img">
+                        <img src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="CategoryImage" width="100%" height="350">
                     </div>
+                    <a href="#" class="category-hover"></a>
                 </div>
                 <div class="category">
-                    <div class="category-content">
-                        <a href="" target="">
-                            <div class="category-overlay"></div>
-                            <img class="category-image" src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="" width="100%"
-                                height="350">
-                            <div class="category-details fadeIn-top">
-                                <h3 class="category-title">This is a title</h3>
-                                <p class="category-text">This is a short description</p>
-                            </div>
-                        </a>
+                    <div class="category-img">
+                        <img src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="CategoryImage" width="100%" height="350">
                     </div>
+                    <a href="#" class="category-hover"></a>
+                </div>
+                <div class="category">
+                    <div class="category-img">
+                        <img src="https://fastly.picsum.photos/id/643/1920/1080.jpg?hmac=np7L94r1uTf0bRVuUP5k5anA_g8xvpqXHr1BDWGkFkY" alt="CategoryImage" width="100%" height="350">
+                    </div>
+                    <a href="#" class="category-hover"></a>
                 </div>
             </div>
             <div class="bestsellertrending-container">
@@ -346,13 +336,13 @@
                         <img src="style/img/shop2.png" alt="" width="100%" height="300">
                     </div>
                     <div class="bestseller-content">
-                        <h1>En Çok Satanlar</h1>
+                        <h1><b>En Çok Satanlar</b></h1>
                         <a href="">Görüntüle</a>
                     </div>
                 </div>
                 <div class="trending">
                     <div class="trending-content">
-                        <h1>Trendler</h1>
+                        <h1><b>Trendler</b></h1>
                         <a href="">Görüntüle</a>
                     </div>
                     <div class="trending-img">
@@ -391,7 +381,7 @@
                             </div>
                             <div class="card-img">
                                 <img src="https://fastly.picsum.photos/id/681/1920/1080.jpg?hmac=qyb0NfTEkQw9QdsIYQbV0GhAEyKiPcAfetmIF_e8Kik"
-                                    alt="" width="100%" height="400">
+                                    alt="" width="100%" height="350">
                             </div>
                             <div class="card-body">
                                 <div class="card-content">
@@ -639,90 +629,6 @@
                                     <a href="#"><i class="fa fa-paper-plane"></i> Ürüne Git</a>
                                     <a href="#"><i class="fa fa-cart-plus"></i> Sepete Ekle</a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="brandslider-container">
-                <input class="brandslider-activator" id="brandslider-activator-1" name="carousel" type="radio" checked="checked">
-                <input class="brandslider-activator" id="brandslider-activator-2" name="carousel" type="radio">
-            
-                <div class="brandslider-controls">
-                    <label class="brandslider-control brandslider-control-next" for="brandslider-activator-2">
-                        <i class="fa fa-angle-right"></i>
-                    </label>
-                </div>
-                <div class="brandslider-controls">
-                    <label class="brandslider-control brandslider-control-prev" for="brandslider-activator-1">
-                        <i class="fa fa-angle-left"></i>
-                    </label>
-                </div>
-                <div class="brandslider-controls">
-                    <label class="brandslider-control brandslider-control-prev" for="brandslider-activator-2">
-                        <i class="fa fa-angle-left"></i>
-                    </label>
-                </div>
-                <div class="brandslider-screen">
-                    <div class="brandslider-track">
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
-                            </div>
-                        </div>
-                        <div class="brandslider-item brandslider-item-mobile brandslider-item-desktop">
-                            <div class="brandslider-img">
-                                <img src="https://picsum.photos/100/100" alt="">
                             </div>
                         </div>
                     </div>
@@ -730,7 +636,7 @@
             </div>
         </div>
         <div class="footer">
-            <h2> Geeks Help </h2>
+            <img src="style/img/logo2_preview_rev_12 kopya.png" alt="" width="123" height="65">
             <p class="footer-description">
                 Geeks Help is an independent website for Web Developers, Programmers, Computer Science students. We
                 provide
@@ -755,8 +661,8 @@
             </div>
         </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,
@@ -776,5 +682,4 @@
         });
     </script>
 </body>
-
 </html>
